@@ -1,0 +1,84 @@
+#!/bin/bash
+#
+# Script to run timing simulation
+# Algorithm:
+# --------------------------
+# Loop start
+# Set number of Particles
+# Execute program
+# Store time
+# Repeat
+#
+numOfLoops=1
+numOfThreads=8
+cubeSize=1E-5
+echo "num = 2"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 2 -numthreads $numOfThreads
+done
+echo "num = 4"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 4 -numthreads $numOfThreads
+done
+echo "num = 6"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 6 -numthreads $numOfThreads
+done
+echo "num = 8"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 8 -numthreads $numOfThreads
+done
+echo "num = 10"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 10 -numthreads $numOfThreads
+done
+echo "num = 12"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 12 -numthreads $numOfThreads
+done
+echo "num = 16"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 16 -numthreads $numOfThreads
+done
+echo "num = 20"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 20 -numthreads $numOfThreads
+done
+echo "num = 26"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 26 -numthreads $numOfThreads
+done
+echo "num = 32"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 32 -numthreads $numOfThreads
+done
+echo "num = 40"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 40 -numthreads $numOfThreads
+done
+echo "num = 52"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 52 -numthreads $numOfThreads
+done
+echo "num = 64"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 64 -numthreads $numOfThreads
+done
+echo "num = 128"
+for((n=0;n<numOfLoops;n++))
+do
+./executable.exe -cube $cubeSize -num 128 -numthreads $numOfThreads
+done

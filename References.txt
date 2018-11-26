@@ -1,0 +1,124 @@
+Key:
+  * indicates the paper seems non-biological and/or is potentially relevant
+  ** indicates the paper seems highly relevant
+
+Yuri:
+
+  ** Numerical recipes in C, W. Press, et al., Cambridge: Cambridge University press, (1982)
+  Swams and swarm intelligence, G. Hinchey, R. Sterritt, C. Rouff, Computer 40.4, (2007), pp 111-113
+  Functions of shoaling behaviour in teleosts, T. Pitcher and J. Parish, Behaviour of teleost fishes, Chapman and Hall, New York, (1993), pp 363-440
+  Flocks, herds, and schools: A distributed behavioural model, C. Reynolds. ACM SIGGRAPH Computer Graphics 21, (1987) pp 25-34
+  Hierarchical group dynamics in pigeon flocks, M. Nagy, Z. Akos, D. Biro, T. Vicsek, Nature 464, (2010), pp 890-893
+  Trail pheromones: an integrative view of their role in colony organisation, T. Czaczkes, C. Grüter, C. Ratnieks, Annuel Review of Entomology 60, (2015), pp 581-599
+  The Effect of Trail Pheromone and Path Confinement on Learning of Complex Routes in the Ant Lasius niger, T. Czaczkes, T. Weichselgartner, A. Bernadou, J. Heinze, PLoS ONE 11(3), (2016)
+  Swarms, phase transitions, and collective intelligence, M. Millonas, Santa Fe Institute studies in the sciences of complexity-proceedings vol. 17, Addison-Wesley Publishing Co, (1994), pp1-6
+  Strong and Weak Emergence, D. Chalmers in P. Davies and P. Clayton (eds), The Re-emergence of Emergence, Oxford University Press, (2006)
+  ** The effects of shape on the interaction of colloidal particles, L. Onsager, Annals of the New York Academy of Sciences 51.4, (1949), pp 627-659
+  Melting, freezing and coilloidal suspensions, H. Löwen, Physics Reports 237.5, (1994), pp 251
+  ** Phase transitions in systems of self-propelled agents and related network models, A. Maximino, et al. Physical review letters 98.9, (2007)
+  * Colloidal Suspensions, W. Russel, D. Saville, W. Schowalter, Cambridge University Press, Cambridge, (1989)
+  ** Simulation method of colloidal suspensions with hydrodynamics interactions: Fluid particle dynamics, H. Tanaka, A. Takeaki, Physical review letters 85.6, (2000)
+  * Translating stochastic density-dependent individual behaviour with sensory constraints to an Euelerian model of animal swarming, D. Grünbaum, Journal of mathematical biology 33.2, (1994), pp 139-161
+  Alignment in a fish school: a mixed Lagrangian-Eulerian approach, M. Adioui, P. Treuil, O. Arino, Eco-logical modelling 167.1, (2003), pp19-32
+  Mathematical models of swarming and social aggregation, L. Edelstein-Keshet, Proceedings of the 2001 International Symposium on Nonlinear Theory and Its Applications, Miyagi, Japan, (2001)
+  The dynamics of herds: from individuals to aggregations, S. Gueron, S. Levin, and D. Rubenstein, Journal of Theoretical Biology 182.1, (1996), pp 85-98
+  Foraging fruit flies: Lagrangian and Eulerian descriptions of insect swarming, J. Majkut, Harvey Mudd College, Claremont, California, (2006), pp 1-2
+  The computational beauty of flocking: boids revisited, I. Bajec, I. Lebar, N. Zimic, M. Mraz, Mathematical and Computer Modelling of Dynamical Systems 13.4, (2007), pp 331-347
+  * Autonomous boids, C. Hartman, B. Bedrich, Computer Animation and Virtual Worlds 16.7-3, (2006), pp 199-206
+  Application of chaos measures to a simplified boids flocking model, J. Harvey, K. Merrick, A. Hussein, Swarm Intelligence 9.1, (2015), pp 23-41
+  Boids control of chaos, I. Makoto, L. Chua, International Journal of Bifurcation and Chaos 17.02, (2007), pp 427-444
+  Time-varying data visualization using information flocking boids, A. Moere, Information Visualization, IEEE Symposium, (2004)
+  * Novel type of phase transition in a system of self- driven particles, T. Vicsek, A. Czirík, E. Ben-Jacob, I. Cohen, O. Shochet, Phys. Rev. Lett. 75, 1226, (1995)
+  ** Boltzmann and hydrodynamic description for self-propelled particles, E. Bertin, E. Droz, G. Grégoire, Physical Review 74.2 (2006)
+  * Modeling collective motion: variations on the Vicsek model, H. Chaté, et al., The European Physical Journal B 64.3-4, (2008), pp 451-456
+  Collective navigation of cargo-carrying swarms, A. Schklarsh, et al., Interface Focus 2.6, (2012), pp 786-798
+  * Emergent self-organization in active materials, M. Hagan, A. Baskaran, Current opinion in cell biology 13.3, (2016), pp 74-80
+  Bees aren't the only ones: swarming in Gram-0negative bacteria, R. Harshey, Molecular microbiology 13.3, (1994), pp 389-394
+  * Emergent states in dense systems of active rods: from swarming to turbulence, H. Wensink, Journal of Physics: Condensed Matter 24.47, (2012), pp 1-3
+  * Kinetic pathways for isotropic-nematic phase transitions in a system of colloidal hard rods: a simulation study, A. Cuetos, D. Marjolein, Physical review letters 98.9, (2007), pp 1-2
+  The DLVO theory in microbial adhesion, M. Hermansson, Colloids and surfaces B: Biointerfaces 14.1, (1999), pp 105-119
+  Einstein's miraculous year: five papers that changed the face of physics, J. Stachel, (2005), pp 74-77
+  * The Feynman Lectures on Physics Vol I, R. Feynman, Addison Wesley Longman, Chapter 41, The Brownian movement, (1970)
+  ** Brownian Motion: Fluctuations, Dynamics and Applications, R. Mazo, Oxford University Press, (2006), pp 222
+  * Paul Langevin's 1908 paper "on the thory of Brownian motion" ["Sur la théorie du mouvement brownien"], D. Lemons, A. Gythiel, American Journal of Physics 65.11 (1997), pp 146, 530-533
+  * Another derivation of generalized Langevin equations, R. Dengler, arXiv preprint, (2015), pp 6
+  ** Stokes-Einstein diffusion of colloids in nematics, F. Mondoit, et al., Physical Review 86.1, (2012)
+  Flagellar synchronization through direct hydrodynamic intercations, D. Brumley, at al. Elife 3, (2014)
+  * Boundary integral and singularity methods for linearized viscous flow, P. Constatine, Cambridge University Press, (1992)
+  * Tutorial on agent-based modelling and simulation, C. Macal, M. North, Journal of simulation 4.3, (2010), pp 151-162
+  * Computer experiments on classical fluids. I. Thermodynamical properties of Lennard-Jones molecules, L. Verlet, Physical review 159.1, (1967), pp 98
+  Improving the packing and accuracy of NMR structures with a pseudopotential for the radius of gyration, J. Kuszewski, A. Gronenborn, G. Clore, Journal of the American Chemical Society 121.10, (1999), pp 2337-2338
+  A note on the generation of random normal deviates, G. Box, E. Muller, The annals of mathematical statistics, 29.2 (1958), pp 610-611
+  Mycoplasma hominis: growth, reproduction, and isoloation of small viable cells, J. Roberston, M. Gomersall, P. Gill, Journal of bacteriology 124.2 (1975), pp 1007-1018
+
+Harry:
+
+  * Reynolds, C., (1987), Flocks, Herds, and Schools: A Distributed Behavioral Model, Computer Graphics 21:4, pp.29-34
+  Bonabeau, E.,Theraulaz, G., Deneubourg, J.-L., Aron, S., and Camazine, S., (1997), Self-organization in social insects. Trends in Ecology and Evolution 12:, pp.188-193
+  Emlen, J.T., (1952), Flocking behaviour in birds, Auk. 69:, pp.160-170
+  Ballerini, (2008), Empirical investigation of starling flocks: a benchmark study in collective animal behavior, Animal Behaviour 76:1, pp.201-205
+  Ward, (2008), Quorum decision-making facilitates information transfer in fish shoals, PNAS 105:19, pp.6948-6953
+  Ward et al., (2007), Speed versus accuracy in decision-making ants: expediting politics and policy implementation, Phil. Trans. R. Soc. B 364:1518
+  Colin, (2014), Fast, high-throughput measurement of collective behaviour in a bacterial population, J. R. Soc. Interface 11:98
+  Carere, C., et al., (2009), Aerial flocking patterns of wintering starlings, Sturnus vulgaris, under different predation risk, Animal Behaviour 77:, pp.101-107
+  * Cohen J., (2013), Emergent comet-like swarming of optically driven thermally active colloids, Phys Rev. Lett. 112
+  * Bricard A., (2015), Emergent vortices in populations of colloidal rollers, Nature Communications 6
+  * Wensink H., (2012), Emergent states in dense systems of active rods: from swarming to turbulence, J. Phys.: Condens. Matter 24
+  * Durst F., Miloievic D., Schönung B., (1984), Eulerian and Lagrangian predictions of particulate two-phase flows: a numerical study, App. Math. Mod. 8:2, pp.101-155
+  * Grünbaum, D., (1994), Translating stochastic density-dependent individual behavior with sensory constraints to an Eulerian model of animal swarming J. Math. Biol. 33: 139
+  Delgado-Mata, C., et al., (2007). On the use of Virtual Animals with Aritifical Fear in Virtual Environments, New Generation Computing 25:2, pp.145-169
+  * Vicsek T. et al., (1995), Novel Type of Phase Transition in a System of Self-Driven Particles, Phys. Rev. Lett. 75:6, pp.1226-1229
+  ** Einstein A., (1906), On the Theory of the Brownian Movement, An. D. Phys. 4:19, pp.371-381
+  ** Ermak, D., McCammon, J., (1978), Brownian dynamics with hydronomic interactions, J. Chem. Phys. 69:4, pp.1352-1360
+  Bonabeau et al., (1999), Swarm Intelligence, From Naturla to Aritificial Systems, Oxford University Press
+  Zhang Y, Wu L (2011) Optimal multi-level thresholding based on maximum tsallis entropy via an artificial bee colony approach, Entropy 13:4, pp.841-859
+  Dorigo et al., (2004), Evolving Self-Organizing Behaviors for a Swarm-Bot, Autonomous Robots 17: 223
+  * Chen, Y., Lin, Y., (2009), Controlling the movement of crowds in computer graphics by using the mechanism of particle swarm optimization. Appl. Soft Comput. 9:3, pp.1170-1176
+  * Karaboga, D., Gorkemli, B., Ozturk, C. et al., Artificial bee colony algorithm and applications, Artif Intell Rev (2014) 42: 21
+  Chaves-Gonzalez, J.M., Vega-Rodriguez, M.A., Gomez-Pulido, J.A., Sanchez-Perez J.M., (2010), Swarm intelligence, scatter search and genetic algorithm to tackle a realistic frequency assignment problem, In: DeCarvalho, A.P.D., RidriguezGonzalez, S., Santana, J.F.D., Rodriguez, J.M.C., Distributed computing and artificial intelligence, Univ. Salamanca, Advances in intelligent and soft computing 79:, pp.441-448
+  * Akay, B., Karaboga, D., (2011), Wavelet packets optimizaton using artificial bee colony algorithm. In: 2011 IEEE congress on evolutionary computation (CEC), pp.89-94
+  * Babu., M., Rao, N., (2010a), Implementaiton of artificial bee colony (abc) algorithm on garlic expert advisory system, Int J Comput Sci Res 1:1, pp.69-74
+  Castello, E., Yamamoto, T., Liu, W., Winfield, A. F., Nakamura, Y. and Ishiguro, H. (2016) Adaptive foraging for simulated and real robotic swarms: The dynamical response threshold approach, Swarm Intelligence 10:1, pp.1-31
+  Hauert, S., Winkler, L., Zufferey, J.-C. and Floreano, D. (2008), Ant-based Swarming with Positionless Micro Air Vehicles for Communication Relay, Swarm Intelligence 2:2-4, pp.167-188
+  Werfel J, (2012), Collective construction with robot swarms, In: Doursat R, Syama H, Michel O (eds) Morphogenetic engineering: toward programmable complex systems, understanding complex systems. Springer, New York, pp.115-140
+  Hauert, S., Bhatia, S., (2014), Mechanisms of Cooperation in Cancer Nanomedicine: Towards Systems Nanotechnology, Trends in Biotechnology 32:9, pp.448-455
+  Timmis, J., Ismail, A. R., Bjerknes, J. D. and Winfield, A. F. (2016), An immune-inspired swarm aggregatin algorithm for self-healing swarm robotic systems, Biosystems 146, pp.60-76
+  Pitcher, B. (n.d.0. MAD Users Manual. [online] Cs.utah.edu. Available at: http://www.cs.utah.edu/pitcher/Team10/userman/ [Accessed 19 Apr. 2017]
+  * Von Neumann, J., (1951) Various techniques used in connection with random digits Nat. Bur. of Stds. App. Math. Series. 12: 36-38
+  ** Press, W.H. Teukolsky, S.A., Vetterling, W.T., Flannery, B.P. (2002), Numerical Recipes in C. Press Syndicate of the University of Cambridge, 2nd Ed. (reprint)
+
+Streeter:
+
+  Swarms and Swarm Intelligence, M.Hinchey et al., Computer 40, 4 (2007)
+  Empirical investigation of starling flocks: a benchmark study in collective animal behaviour, M. Ballerini et al., Animal Behaviour 76,201, (2008)
+  'Strong and Weak Emergence', D. Chalmers in P. Davies and P. Clayton (eds.), The Re-emergence of Emergence. Oxford University Press, (2006)
+  Information transfer and behaviour inertia in starling flocks, A. Attanasi et al., Nature Physics 10, 9. (2014)
+  Scale-free correlations in starling flocks, A. Cavagna et al., PNAS 107, 26, (2010)
+  Starling Flock Networks Manage Uncertainty in Consesus at Low Cost, G. Young et al., PLOS 9, 1, (2013)
+  Flocks, Herds and Schools: A Distributed Behaviour model, C. Reynolds, Computer Graphics 21, 4, (1987)
+  Dynamical aspects of animal grouping: swarms, schools, flocks, and herds, A. Okubo, Adv. Biophysics 22, (1986)
+  Emergent collective behavior of microorganisms, G. Lambert, PhD thesis, Princeton University, (2011)
+  Overview of Mathematical Approaches Used to Model Bacterial Chemotaris II: Bacterial Populations, M. Tindall, Bulletin of Mathematical Biology 70, (2008)
+  Emergent comet-like swarming of optically driven thermally active colloids, J. Colen, Phys. Rev. Lett. 112, (2014)
+  ** Emergence of macroscopic directed motion in populations of motile colloids, A. Bricard et al., Nature 503, (2013)
+  * Emergent states in dense systems of active rods: from swarming to turbulence, H. Wensink, J. Phys.: Condens. Matter 24, (2012)
+  * Emergent vortices in populations of colloidal rollers, A. Bricard et al., Nature Communications 6, (2015)
+  * Shape control and compartmentalization in active colloidal cells, M. Spellings et al., PNAS 112, 34, (2015)
+  Transport of cargo by catalytic Janus micro-motors, L. Baraban et al., Soft Matter 8, 48 (2012)
+  *Evolution of self-organised path formation in robots, V. Sperati et al., Swarm Intelligence 5, 2 (2011)
+  * Mathetmatical models of swarming and social aggregation, L. Edelstein-Keshet, invited lecture: The 2001 Symposium on Nonlinear Theory and its Applications, (NOLTA 2001) Miyagi, Japan (Oct 28-Nov 1, 2001)
+  ** Random dispersal in theoretical populations, J, Skellam, Biometrika 38, 1-2, (1951)
+  ** 'Diffusion Approximations', P. Glynn in D. Heyman and M. Sobel (eds.), Handbooks on OR & MS, Vol. 2. Elsevier Science Publishers, (1990)
+  ** Population dispersal via diffusion-reaction equations, A. Kandler & R. Unger. Techn. Univ. Fak. fur Mathematik, (2010)
+  ** Brownian dynamics with hydrodynamic interactions, D. Ermak & J. McCammon, The Journal of Chemical Physics 69, (1978)
+  Inferring individual rules from collective behavior, R. Lukeman et al., PNAS 107, 28, (2010)
+  * An interacting particle system modelling aggregation behaviour: from individuals to populations, J. Math. Biol. 50, (2005)
+  * Novel Type of Phase Transition in a System of Self-Driven Particles, Vicsek et al., Physical Review Letters 75, 6, (1995)
+  Are biological systems posed at criticality?, T. Mora & W. Bialek, Journal of Statistical PHysics 144, 2, (2011)
+  More is Diferent, P. Anderson, Science 177, 4047, (1972)
+  *Nature of the order-disorder transition in the Vicsek model for the collective motion of self-propelled particles, G. Baglietto & E. Albano, Physical Review E 80, 5, (2009)
+  * Swarming behavior of gradient-responsive Brownian particles in a proous medium, P. Grancic & F. Stepanek, Physical Review E 86, (2012)
+  ** Hydrodynamics Determines Collective Motion and Phase Behavior of Active Colloids in Quasi-Two-Dimensional Confinement, A. Zottl & H. Stark, Physical Review Letters 112 (2014)
+  ** Collective motion of Brownian particles with hydrodynamic interactions, E. Erdmann & W. Ebeling, Fluctuation and Noise Letters 3, 2, (2003)
+  ** Comparison of Brownian dynamics algorithms with hydrodynamic interaction, R. Schmidt et al., Journal of Chemical Physics 135, (2011)
+  Flocking at a distance in active granular matter, N. Kumar et al., Nature Communications 5, 4688, (2014)
