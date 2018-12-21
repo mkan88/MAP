@@ -117,7 +117,7 @@ void stochastic_displacement_creation(int numberOfParticles, double *stochasticW
 	// reset upper triangle
 	//  this is done to simplify the code and potential testing
 	//  and should not be counted as algorithm time
-	#pragma parallel omp for
+	#pragma omp parallel for
 	for (i = 0; i < N; i++)
 	{
 		for (j = 0; j < i; j++) {
@@ -125,7 +125,7 @@ void stochastic_displacement_creation(int numberOfParticles, double *stochasticW
 		}
 	}
 	
-	#pragma parallel
+	#pragma omp parallel
 	{
 		gsl_rng *tSeed = rndarray[omp_get_thread_num()];
 		#pragma omp for
@@ -136,7 +136,7 @@ void stochastic_displacement_creation(int numberOfParticles, double *stochasticW
 	}
 
 
-	#pragma parallel omp for
+	#pragma omp parallel for
 	for (int i = 0; i < N; i++)
 	{
 		stochasticDisplacement[i] = 0;

@@ -18,7 +18,7 @@
 #include "initial_finalisation.h"
 
 //
-// Physucal constants
+// Physical constants
 //
 
 extern double gBoltzmannConst;
