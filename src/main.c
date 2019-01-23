@@ -146,6 +146,7 @@ int main(int argc, char *argv[])
 
     	if(rndarray == NULL)
     	{
+            printf("-Problem with rndarray");
             MPI_Abort(MPI_COMM_WORLD, MPI_error);
     		return -1;
     	}
@@ -158,6 +159,7 @@ int main(int argc, char *argv[])
 
     	if(generalisedCoordinates == NULL)
     	{
+            printf("Problem with generalisedCoordinates");
             MPI_Abort(MPI_COMM_WORLD, MPI_error);
     		return -1;
     	}
