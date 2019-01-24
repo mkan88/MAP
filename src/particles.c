@@ -100,11 +100,14 @@ int generate_particle_data(int numberOfParticles, particleVariables **particles,
 		initParticles[i].beta = 2*gPi * gsl_rng_uniform(tSeed);
 		initParticles[i].gamma = 2*gPi * gsl_rng_uniform(tSeed);
 
+        //
+        // Ensure distance of particle i with other particles <i are not too close
+        //
         for(int j = 0; j < i; j ++)
         {
             double x = initParticles[i].x - initParticles[j].x;
             double y = initParticles[i].y - initParticles[j].y;
-            double  z = initParticles[i].z - initParticles[j].z;
+            double z = initParticles[i].z - initParticles[j].z;
             //
             // Calculate |r|
             //
@@ -123,7 +126,7 @@ int generate_particle_data(int numberOfParticles, particleVariables **particles,
 
         if(attempt == 10000)
         {
-            printf("Particle generation time out, particle %d could not be placed.\n",i );
+            printf("Particle generation time out, particle %d could not be placed since the particles are too close.\n",i );
             return -1;
         }
 	}

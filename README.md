@@ -40,7 +40,7 @@ time x1 y1 z1 x2 y2 z2 ... xn yn zn alpha1 beta1 gamma1 ... alphan betan gamman
 
 If not generating particles using -num [VALUE], an input file is expected to be provided. The file must be as follows:
 
-* Name - particleValues.txt
+* Name - particleInput.txt
 * Format :
 
  NumberOfParticles\n
