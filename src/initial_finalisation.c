@@ -169,7 +169,7 @@ void boilerplate_variables(environmentVariables *conditions)
 	conditions->zMax = 1E-6;
 	conditions->numberOfParticles = 0;
 	conditions->fileNum = 0;
-	conditions->drivingForceMagnitude=1E-12; //N,  set to 1pN
+	conditions->drivingForceMagnitude=1E-13; //N,  set to 0.1pN, 1pN too large
 
 
 	gNumOfthreads = omp_get_max_threads();
