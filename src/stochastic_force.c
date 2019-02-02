@@ -80,7 +80,7 @@ void stochastic_displacement_creation(int numberOfParticles, double *stochasticW
 /*
 */
 
-	// LITERATURE METHOD (Cholesky)
+	// LITERATURE METHOD (Cholesky-Crout)
 	int N = 6 * numberOfParticles; // array is a linearized (6*N) by (6*N) array
 	double sum;
 	int i, j, k;
