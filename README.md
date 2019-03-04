@@ -49,6 +49,9 @@ If not generating particles using -num [VALUE], an input file is expected to be 
 
  x1  y1  z1 alpha1 beta1 gamma1\n
 
+ Alpha is the angle in the x-y plane. Beta is the angle in the z-y plane. Gamma is the rotation of the particle along its N-S axis 
+
+
 
 ### Output
 
@@ -103,7 +106,7 @@ Note how the order is important here. The MPI flags must come BEFORE the program
 
 ### Available Flags
 * -debug, tells the program to write all values and variable to file for debugging purposes.
-* -num [VALUE] or -n [VALUE], the number of particles to be simulated. VALUE must be positive integer
+* -num [VALUE] or -n [VALUE], the number of particles to be randomly generated and simulated (ignore if you want to use input in particleInput.txt). VALUE must be positive integer
 * -threads [VALUE], the maximum number of threads per node
 * -filenum [VALUE], number appended to file name. See [Input Output]
 * -cube [VALUE], defines a cube of edge length VALUE where particles will be placed if spawned in program
