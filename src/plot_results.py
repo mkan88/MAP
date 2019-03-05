@@ -56,5 +56,7 @@ def main(filename):
 
 
 if __name__ == '__main__':
-    #main(sys.api_versionargv([1]))
-    main('../output0000000.csv')
+    if len(sys.argv) == 2:
+        main(sys.argv([1]))
+    else:
+        main('../output0000000.csv')
