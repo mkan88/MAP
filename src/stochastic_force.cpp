@@ -8,6 +8,8 @@
 **************************************/
 
 #include <stdlib.h>
+#include <cstdlib>
+#include <iostream>
 #include <math.h>
 #include <time.h>
 #include <omp.h>
@@ -18,11 +20,22 @@
 #include "stochastic_force.h"
 #include "maths_functions.h"
 
+#include <cuda_runtime.h>
+#include "cublas_v2.h"
+#include "cusolverDn.h"
+#include "helper_cuda.h"
+#include "helper_cusolver.h"
+
+
+extern "C" void stochastic_displacement_creation(int numberOfParticles, double *stochasticWeighting, double *stochasticDisplacement, gsl_rng *rndarray[], 
+double *rndNumArray, double timestep);
+
 
 extern int gDebug;
 extern int gNumOfthreads;
 
-void stochastic_displacement_creation(int numberOfParticles, double *stochasticWeighting, double *stochasticDisplacement, gsl_rng *rndarray[],double *rndNumArray, double timestep){
+void stochastic_displacement_creation(int numberOfParticles, double *stochasticWeighting, double *stochasticDisplacement, gsl_rng *rndarray[],
+double *rndNumArray, double timestep){
 
 
 	/*// HOME-MADE METHOD
@@ -94,26 +107,80 @@ void stochastic_displacement_creation(int numberOfParticles, double *stochasticW
 	//for (i = 0; i < dimensionSize * dimensionSize; i++)
 		//L[i] = A[i];
 
-	for (j = 0; j < N; j++)
-	{
-		sum = 0;
-		for (k = 0; k < j; k++)
-		{
-			sum += stochasticWeighting[j * N + k] * stochasticWeighting[j * N + k];
-		}
-		stochasticWeighting[j * N + j] = sqrt(stochasticWeighting[j * N + j] - sum);
+	// for (j = 0; j < N; j++)
+	// {
+	// 	sum = 0;
+	// 	for (k = 0; k < j; k++)
+	// 	{
+	// 		sum += stochasticWeighting[j * N + k] * stochasticWeighting[j * N + k];
+	// 	}
+	// 	stochasticWeighting[j * N + j] = sqrt(stochasticWeighting[j * N + j] - sum);
 
-		#pragma omp parallel for private(i,k,sum) shared (stochasticWeighting,j) schedule(static) if (j < N - cutoff)
-		for (i = j + 1; i < N; i++)
-		{
-			sum = 0;
-			for (k = 0; k < j; k++)
-			{
-				sum += stochasticWeighting[i * N + k] * stochasticWeighting[j * N + k];
-			}
-			stochasticWeighting[i * N + j] = (1.0 / stochasticWeighting[j * N + j] * (stochasticWeighting[i * N + j] - sum));
-		}
-	}
+	// 	#pragma omp parallel for private(i,k,sum) shared (stochasticWeighting,j) schedule(static) if (j < N - cutoff)
+	// 	for (i = j + 1; i < N; i++)
+	// 	{
+	// 		sum = 0;
+	// 		for (k = 0; k < j; k++)
+	// 		{
+	// 			sum += stochasticWeighting[i * N + k] * stochasticWeighting[j * N + k];
+	// 		}
+	// 		stochasticWeighting[i * N + j] = (1.0 / stochasticWeighting[j * N + j] * (stochasticWeighting[i * N + j] - sum));
+	// 	}
+	// }
+
+	// CUDA method
+	double * stochasticWeightingDevice = NULL;	// Copy of stochasticWeighting
+	cusolverDnHandle_t handle = NULL;
+    cudaStream_t stream = NULL;
+    int bufferSize = 0;
+    int *info = NULL;
+    double *buffer = NULL;
+    double *stochasticWeightingWorkspace = NULL;	//Copy of stochasticWeighting being decomposed
+    int h_info = 0;
+    cublasFillMode_t uplo = CUBLAS_FILL_MODE_UPPER;
+
+	checkCudaErrors(cusolverDnCreate(&handle));
+    checkCudaErrors(cudaStreamCreate(&stream));
+
+    checkCudaErrors(cusolverDnSetStream(handle, stream));
+
+    checkCudaErrors(cudaMalloc((void **)&stochasticWeightingDevice, sizeof(double)*N*N));
+
+    checkCudaErrors(cudaMemcpy(stochasticWeightingDevice, stochasticWeighting, sizeof(double)*N*N, cudaMemcpyHostToDevice));
+
+    //CHOL
+    checkCudaErrors(cusolverDnDpotrf_bufferSize(handle, uplo, N, (double*)stochasticWeightingDevice, N, &bufferSize));
+
+    checkCudaErrors(cudaMalloc(&info, sizeof(int)));
+    checkCudaErrors(cudaMalloc(&buffer, sizeof(double)*bufferSize));
+    checkCudaErrors(cudaMalloc(&stochasticWeightingWorkspace, sizeof(double)*N*N));
+
+    checkCudaErrors(cudaMemcpy(stochasticWeightingWorkspace, stochasticWeightingDevice, sizeof(double)*N*N, cudaMemcpyDeviceToDevice));
+    checkCudaErrors(cudaMemset(info, 0, sizeof(int)));
+
+    checkCudaErrors(cusolverDnDpotrf(handle, uplo, N, stochasticWeightingWorkspace, N, buffer, bufferSize, info));
+
+    checkCudaErrors(cudaMemcpy(&h_info, info, sizeof(int), cudaMemcpyDeviceToHost));
+
+    if ( 0 != h_info ){
+        fprintf(stderr, "Error: Cholesky factorization failed\n");
+    }
+
+    checkCudaErrors(cudaMemcpy(stochasticWeighting, stochasticWeightingWorkspace, sizeof(double)*N*N, cudaMemcpyDeviceToHost));
+
+    if (info  ) { checkCudaErrors(cudaFree(info)); }
+    if (buffer) { checkCudaErrors(cudaFree(buffer)); }
+    if (stochasticWeightingWorkspace     ) { checkCudaErrors(cudaFree(stochasticWeightingWorkspace)); }
+
+    if (handle) { checkCudaErrors(cusolverDnDestroy(handle)); }
+    // if (cublasHandle) { checkCudaErrors(cublasDestroy(cublasHandle)); }
+    if (stream) { checkCudaErrors(cudaStreamDestroy(stream)); }
+
+    if (stochasticWeightingDevice) { checkCudaErrors(cudaFree(stochasticWeightingDevice)); }
+
+    cudaDeviceReset();
+
+
 	// reset upper triangle
 	//  this is done to simplify the code and potential testing
 	//  and should not be counted as algorithm time
