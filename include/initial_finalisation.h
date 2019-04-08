@@ -6,6 +6,10 @@
 #include <stdarg.h>
 #include "particles.h"
 
+#ifdef __cplusplus
+  extern "C" {
+#endif
+
 typedef struct
 {
 	double temperature; // K
@@ -32,5 +36,13 @@ gsl_rng** rand_array_allocation();
 double* generalised_coordinate_initialisation(environmentVariables *conditions, gsl_rng *rndarray[]);
 
 void free_memory(int listSize, ...);
+
+void initialise_gpu();
+
+void finalise_gpu();
+
+#ifdef __cplusplus
+  }
+#endif
 
 #endif //_INITIAL_FINALISATION_H

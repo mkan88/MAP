@@ -226,6 +226,11 @@ int main(int argc, char *argv[])
         fflush(details);
 
         //
+        // GPU initialisation
+        //
+        initialise_gpu();
+
+        //
         // Loop through time, output each time step to a file.
         //
         int loop = 0;
@@ -417,6 +422,8 @@ int main(int argc, char *argv[])
 
     	free_memory(5,diffusionMatrix, generalisedCoordinates, stochasticWeighting, stochasticDisplacement, additionalForces);
     	diffusionMatrix = generalisedCoordinates = stochasticWeighting = stochasticDisplacement = additionalForces = NULL ;
+
+        finalise_gpu();
     }
 
     if( TOP_SLAVE == taskid )

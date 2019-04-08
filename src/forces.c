@@ -38,7 +38,7 @@ extern double gPi;
 // r= r2 -r1
 //
 static double gHamaker =2*3.7E-19;
-static double gExpTuningA = 1.0E23;
+static double gExpTuningA = 7.4E4;
 static double gExpTuningB = 4.8E8;
 static double gTuningC = -550E-9;
 static double gTuningD = 7;
@@ -124,7 +124,7 @@ static void force_van_der_waals(double *additionalForces, double *generalisedCoo
             //
             r = sqrt(x * x + y * y + z * z);
             //
-            // Calculate  -32AR^6 / 3|r|^4(|r|^2 - 4R^2)^2
+            // Calculate  -32AR^6 / 3|r|^3(|r|^2 - 4R^2)^2
             //
             forceConst = 32*gHamaker*pow(radius,6)*pow(gTuningD,6) / ( 3 * pow(gTuningC-r,3)*pow( ( pow(gTuningC -r,2) - 4*pow(radius*gTuningD,2)) , 2) );
             //
@@ -172,7 +172,7 @@ static void force_exp_repulsion(double *additionalForces, double *generalisedCoo
             //
             // Calculate 1/R * Aexp(-|r|/lamda)
             //
-            forceConst =  gHamaker * gExpTuningA * gExpTuningB * ( 1/gTuningD)*exp(gExpTuningB * (gTuningC - r)/gTuningD);
+            forceConst =  gExpTuningA * gExpTuningB * ( 1/gTuningD)*exp(gExpTuningB * (gTuningC - r)/gTuningD);
             //
             // Vectorise
             //
