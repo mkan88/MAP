@@ -18,6 +18,11 @@
 #include <gsl/gsl_rng.h>
 
 #include "initial_finalisation.h"
+
+#ifdef __cplusplus
+  extern "C" {
+#endif
+
 typedef struct
 {
     double x;
@@ -33,5 +38,9 @@ int  particle_read_in(particleVariables **particles);
 int generate_particle_data(int numberOfParticles, particleVariables **particles, gsl_rng *tSeed, double radius, double xMax, double yMax, double zMax);
 
 double *generalised_coordinate_creation(int numberOfParticles, particleVariables *particles);
+
+#ifdef __cplusplus
+  }
+#endif
 
 #endif // _PARTICLES_H

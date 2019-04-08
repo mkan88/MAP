@@ -148,7 +148,7 @@ double *rndNumArray, double timestep){
 
     checkCudaErrors(cudaMemcpy(stochasticWeightingDevice, stochasticWeighting, sizeof(double)*N*N, cudaMemcpyHostToDevice));
 
-    //CHOL
+    //cuSolverDn_LinearSolver->linearSolverCHOL
     checkCudaErrors(cusolverDnDpotrf_bufferSize(handle, uplo, N, (double*)stochasticWeightingDevice, N, &bufferSize));
 
     checkCudaErrors(cudaMalloc(&info, sizeof(int)));
@@ -178,7 +178,7 @@ double *rndNumArray, double timestep){
 
     if (stochasticWeightingDevice) { checkCudaErrors(cudaFree(stochasticWeightingDevice)); }
 
-    cudaDeviceReset();
+    // cudaDeviceReset();
 
 
 	// reset upper triangle
